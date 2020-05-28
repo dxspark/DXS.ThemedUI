@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ThemedUIView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1414" animating="YES" customClass="ThemedUIActivityIndicatorView">
+                                <rect key="frame" x="29" y="28" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5040" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUIButton">
+                                <rect key="frame" x="29" y="56" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9319" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUILabel">
+                                <rect key="frame" x="29" y="94" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="9535" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUIPageControl">
+                                <rect key="frame" x="29" y="122.5" width="39" height="37"/>
+                            </pageControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9970" customClass="ThemedUISegmentedControl">
+                                <rect key="frame" x="29" y="167.5" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="10868" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUISlider">
+                                <rect key="frame" x="27" y="206.5" width="118" height="31"/>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="11596" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUIStepper">
+                                <rect key="frame" x="29" y="244.5" width="94" height="32"/>
+                            </stepper>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="11857" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUISwitch">
+                                <rect key="frame" x="29" y="284.5" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="14126" translatesAutoresizingMaskIntoConstraints="NO" customClass="ThemedUITextField">
+                                <rect key="frame" x="29" y="323.5" width="56" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="16022" customClass="ThemedUITextView" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="29" y="365.5" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <constraints>
+                                    <constraint id="16262" firstAttribute="height" constant="128"/>
+                                    <constraint id="16263" firstAttribute="width" constant="240"/>
+                                </constraints>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1415" firstItem="1414" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8"/>
+                            <constraint id="1416" firstItem="1414" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9"/>
+                            <constraint id="5041" firstItem="5040" firstAttribute="top" secondItem="1414" secondAttribute="bottom" constant="8"/>
+                            <constraint id="5042" firstItem="5040" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="9320" firstItem="9319" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="9321" firstItem="9319" firstAttribute="top" secondItem="5040" secondAttribute="bottom" constant="8"/>
+                            <constraint id="9536" firstItem="9535" firstAttribute="top" secondItem="9319" secondAttribute="bottom" constant="8"/>
+                            <constraint id="9537" firstItem="9535" firstAttribute="leading" secondItem="9319" secondAttribute="leading"/>
+                            <constraint id="9973" firstItem="9970" firstAttribute="top" secondItem="9535" secondAttribute="bottom" constant="8"/>
+                            <constraint id="9974" firstItem="9970" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="10871" firstItem="10868" firstAttribute="top" secondItem="9970" secondAttribute="bottom" constant="8"/>
+                            <constraint id="10872" firstItem="10868" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="11121" firstAttribute="trailingMargin" secondItem="10868" secondAttribute="trailing" constant="251"/>
+                            <constraint id="11597" firstItem="11596" firstAttribute="top" secondItem="10868" secondAttribute="bottom" constant="8"/>
+                            <constraint id="11598" firstItem="11596" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="11858" firstItem="11857" firstAttribute="top" secondItem="11596" secondAttribute="bottom" constant="8"/>
+                            <constraint id="11859" firstItem="11857" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="14127" firstItem="14126" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                            <constraint id="14128" firstItem="14126" firstAttribute="top" secondItem="11857" secondAttribute="bottom" constant="8"/>
+                            <constraint id="16259" firstItem="16022" firstAttribute="top" secondItem="14126" secondAttribute="bottom" constant="8"/>
+                            <constraint id="16260" firstItem="16022" firstAttribute="leading" secondItem="1414" secondAttribute="leading"/>
+                        </constraints>
+                        <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="1" alpha="1"/>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="9319" id="name-outlet-9319"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
