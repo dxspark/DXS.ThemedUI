@@ -7,20 +7,22 @@ using UIKit;
 
 namespace DXS.ThemedUI.Views
 {
-    [Register("ThemedUILabel"), DesignTimeVisible(true)]
-    public class ThemedUILabel : UILabel
+    [Register("ThemedUIProgressView"), DesignTimeVisible(true)]
+    public class ThemedUIProgressView : UIProgressView
     {
-        public ThemedUILabel() : base()
+        public ThemedUIProgressView() : base()
         {
             Initialize();
         }
 
-        public ThemedUILabel(CGRect frame) : base(frame)
+        public ThemedUIProgressView(CGRect frame) : base(frame)
         {
             Initialize();
         }
 
-        public ThemedUILabel(IntPtr handle) : base(handle) {}
+        public ThemedUIProgressView(IntPtr handle) : base(handle)
+        {
+        }
 
         public override void AwakeFromNib()
         {
@@ -30,7 +32,7 @@ namespace DXS.ThemedUI.Views
 
         void Initialize()
         {
-            this.WithStyle(ThemedUI.CurrentTheme.ThemedUILabelStyle);
+            this.WithStyle(ThemedUI.CurrentTheme.ThemedUIProgressViewStyle);
         }
     }
 }

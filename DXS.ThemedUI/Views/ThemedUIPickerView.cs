@@ -7,20 +7,22 @@ using UIKit;
 
 namespace DXS.ThemedUI.Views
 {
-    [Register("ThemedUILabel"), DesignTimeVisible(true)]
-    public class ThemedUILabel : UILabel
+    [Register("ThemedUIPickerView"), DesignTimeVisible(true)]
+    public class ThemedUIPickerView : UIPickerView
     {
-        public ThemedUILabel() : base()
+        public ThemedUIPickerView() : base()
         {
             Initialize();
         }
 
-        public ThemedUILabel(CGRect frame) : base(frame)
+        public ThemedUIPickerView(CGRect frame) : base(frame)
         {
             Initialize();
         }
 
-        public ThemedUILabel(IntPtr handle) : base(handle) {}
+        public ThemedUIPickerView(IntPtr handle) : base(handle)
+        {
+        }
 
         public override void AwakeFromNib()
         {
@@ -30,7 +32,7 @@ namespace DXS.ThemedUI.Views
 
         void Initialize()
         {
-            this.WithStyle(ThemedUI.CurrentTheme.ThemedUILabelStyle);
+            this.WithStyle(ThemedUI.CurrentTheme.ThemedUIPickerViewStyle);
         }
     }
 }

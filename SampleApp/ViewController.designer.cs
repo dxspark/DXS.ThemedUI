@@ -16,13 +16,13 @@ namespace SampleApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        DXS.ThemedUI.Views.ThemedUILabel myLabel { get; set; }
+        DXS.ThemedUI.Views.ThemedUIPickerView pickerView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (myLabel != null) {
-                myLabel.Dispose ();
-                myLabel = null;
+            if (pickerView != null) {
+                pickerView.Dispose ();
+                pickerView = null;
             }
         }
     }

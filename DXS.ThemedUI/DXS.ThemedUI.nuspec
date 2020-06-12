@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DXS.ThemedUI</id>
+        <version>1.0.0</version>
+        <authors>DXS agap2IT</authors>
+        <owners>José "nicruo" Medeiros, DXS agap2IT</owners>
+        <licenseUrl>https://github.com/DXS-agap2IT/DXS.ThemedUI/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/DXS-agap2IT/DXS.ThemedUI</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>ThemedUI: Xamarin iOS Theme System</description>
+        <copyright>Copyright 2020</copyright>
+        <tags>iOS Theme</tags>
+    </metadata>
+    <files>
+        <file src="bin/Release/DXS.ThemedUI.dll" target="lib/Xamarin.iOS10/DXS.ThemedUI.dll" /> 
+    </files>
+</package>

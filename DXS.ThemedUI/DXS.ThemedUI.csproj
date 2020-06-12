@@ -59,6 +59,9 @@
     <Compile Include="Views\ThemedUISwitch.cs" />
     <Compile Include="Views\ThemedUITextView.cs" />
     <Compile Include="Views\ThemedUITextField.cs" />
+    <Compile Include="Views\ThemedUIDatePicker.cs" />
+    <Compile Include="Views\ThemedUIPickerView.cs" />
+    <Compile Include="Views\ThemedUIProgressView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,49 +1,23 @@
-﻿using DXS.ThemedUI;
-using DXS.ThemedUI.Extensions;
-using DXS.ThemedUI.Views;
-using Foundation;
-using System;
-using System.Threading.Tasks;
+﻿using System;
 using UIKit;
-
 
 namespace SampleApp
 {
     public partial class ViewController : UIViewController
     {
-        UILabel label;
-            
+        public ViewController(IntPtr handle) : base(handle) {}
 
-        public ViewController(IntPtr handle) : base(handle)
-        {
-            ThemedUI.Init(new Theme());
-        }
-
-        public override async void ViewWillAppear(bool animated)
+        public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
-            label = new ThemedUILabel();
-
-            await test();
-            //label.WithStyle(new Theme().YellowThemedUILabelStyle);
+            pickerView.Model = new PickerViewModel();
         }
 
-
-        public async Task test()
+        class PickerViewModel : UIPickerViewModel
         {
-            await Task.Delay(1000);
-        }
-
-        public override void ViewDidLoad()
-        {
-            base.ViewDidLoad();
-        }
-
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
+            public override nint GetComponentCount(UIPickerView pickerView) => 1;
+            public override nint GetRowsInComponent(UIPickerView pickerView, nint component) => 5;
+            public override string GetTitle(UIPickerView pickerView, nint row, nint component) => row.ToString();
         }
     }
 }

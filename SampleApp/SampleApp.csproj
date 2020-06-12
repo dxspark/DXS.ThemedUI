@@ -113,6 +113,7 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
+        <Folder Include="Themes\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -120,7 +121,6 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
-        <None Include="Entitlements.plist" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Main.cs" />
@@ -130,7 +130,8 @@
         <Compile Include="ViewController.designer.cs">
             <DependentUpon>ViewController.cs</DependentUpon>
         </Compile>
-        <Compile Include="Theme.cs" />
+        <Compile Include="Themes\BlueTheme.cs" />
+        <Compile Include="Themes\RedTheme.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\DXS.ThemedUI\DXS.ThemedUI.csproj">

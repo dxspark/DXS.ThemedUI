@@ -14,6 +14,8 @@ namespace DXS.ThemedUI
 
         IStyle<ThemedUIPageControl> ThemedUIPageControlStyle { get; }
 
+        IStyle<ThemedUIProgressView> ThemedUIProgressViewStyle { get; }
+
         IStyle<ThemedUISegmentedControl> ThemedUISegmentedControlStyle { get; }
 
         IStyle<ThemedUISlider> ThemedUISliderStyle { get; }
@@ -25,5 +27,9 @@ namespace DXS.ThemedUI
         IStyle<ThemedUITextField> ThemedUITextFieldStyle { get; }
 
         IStyle<ThemedUITextView> ThemedUITextViewStyle { get; }
+
+        IStyle<ThemedUIDatePicker> ThemedUIDatePickerStyle { get; }
+
+        IStyle<ThemedUIPickerView> ThemedUIPickerViewStyle { get; }
     }
 }
