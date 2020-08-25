@@ -10,15 +10,11 @@ namespace DXS.ThemedUI.Views
     [Register("ThemedUILabel"), DesignTimeVisible(true)]
     public class ThemedUILabel : UILabel
     {
-        public ThemedUILabel() : base()
-        {
-            Initialize();
-        }
+        public UIEdgeInsets EdgeInsets { get; set; } = UIEdgeInsets.Zero;
 
-        public ThemedUILabel(CGRect frame) : base(frame)
-        {
-            Initialize();
-        }
+        public ThemedUILabel() : base() => Initialize();
+
+        public ThemedUILabel(CGRect frame) : base(frame) => Initialize();
 
         public ThemedUILabel(IntPtr handle) : base(handle) {}
 
@@ -28,9 +24,25 @@ namespace DXS.ThemedUI.Views
             Initialize();
         }
 
-        void Initialize()
+        void Initialize() => this.WithStyle(ThemedUI.CurrentTheme.ThemedUILabelStyle);
+
+        public override CGRect TextRectForBounds(CGRect bounds, nint numberOfLines)
         {
-            this.WithStyle(ThemedUI.CurrentTheme.ThemedUILabelStyle);
+            CGRect textRect = base.TextRectForBounds(EdgeInsets.InsetRect(bounds), numberOfLines);
+            return GetInvertedInsets().InsetRect(textRect);
+        }
+
+        public override void DrawText(CGRect rect) => base.DrawText(EdgeInsets.InsetRect(rect));
+
+        UIEdgeInsets GetInvertedInsets()
+        {
+            return new UIEdgeInsets
+            (
+                -EdgeInsets.Top,
+                -EdgeInsets.Left,
+                -EdgeInsets.Bottom,
+                -EdgeInsets.Right
+            );
         }
     }
 }
