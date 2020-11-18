@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>DXS.ThemedUI</id>
-        <version>1.1.0</version>
+        <version>1.2.0</version>
         <authors>DXS agap2IT</authors>
         <owners>José "nicruo" Medeiros, DXS agap2IT</owners>
         <licenseUrl>https://github.com/DXS-agap2IT/DXS.ThemedUI/blob/master/LICENSE</licenseUrl>
