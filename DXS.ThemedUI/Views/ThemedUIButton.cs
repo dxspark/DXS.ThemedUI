@@ -14,6 +14,7 @@ namespace DXS.ThemedUI.Views
         public UIColor NormalBackgroundColor { get; set; }
         public UIColor HighlightedBackgroundColor { get; set; }
         public UIColor DisabledBackgroundColor { get; set; }
+        public UIColor SelectedBackgroundColor { get; set; }
 
         public override bool Enabled
         {
@@ -33,6 +34,17 @@ namespace DXS.ThemedUI.Views
             {
                 base.Highlighted = value;
                 var state = value ? UIControlState.Highlighted : UIControlState.Normal;
+                SetBackgroundColorForState(state);
+            }
+        }
+
+        public override bool Selected
+        {
+            get { return base.Selected; }
+            set
+            {
+                base.Selected = value;
+                var state = value ? UIControlState.Selected : UIControlState.Normal;
                 SetBackgroundColorForState(state);
             }
         }
@@ -81,6 +93,12 @@ namespace DXS.ThemedUI.Views
                     if (HighlightedBackgroundColor != null)
                     {
                         BackgroundColor = HighlightedBackgroundColor;
+                    }
+                    break;
+                case UIControlState.Selected:
+                    if (SelectedBackgroundColor != null)
+                    {
+                        BackgroundColor = SelectedBackgroundColor;
                     }
                     break;
                 case UIControlState.Disabled:
