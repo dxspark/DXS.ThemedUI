@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using CoreGraphics;
 using DXS.ThemedUI.Extensions;
 using Foundation;
@@ -33,7 +32,7 @@ namespace DXS.ThemedUI.Views
             set
             {
                 base.Highlighted = value;
-                var state = value ? UIControlState.Highlighted : UIControlState.Normal;
+                var state = value ? UIControlState.Highlighted : Selected ? UIControlState.Selected : UIControlState.Normal;
                 SetBackgroundColorForState(state);
             }
         }
@@ -44,7 +43,7 @@ namespace DXS.ThemedUI.Views
             set
             {
                 base.Selected = value;
-                var state = value ? UIControlState.Selected : UIControlState.Normal;
+                var state = value ? UIControlState.Selected : Highlighted ? UIControlState.Highlighted : UIControlState.Normal;
                 SetBackgroundColorForState(state);
             }
         }
