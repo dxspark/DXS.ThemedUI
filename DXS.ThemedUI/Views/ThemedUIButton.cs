@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using CoreGraphics;
 using DXS.ThemedUI.Extensions;
 
 namespace DXS.ThemedUI.Views
