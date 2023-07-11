@@ -1,9 +1,5 @@
-﻿using System;
-using System.ComponentModel;
-using CoreGraphics;
+﻿using System.ComponentModel;
 using DXS.ThemedUI.Extensions;
-using Foundation;
-using UIKit;
 
 namespace DXS.ThemedUI.Views
 {
