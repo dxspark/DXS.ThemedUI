@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UIKit;
+﻿using System.Collections;
 
 namespace DXS.ThemedUI
 {
@@ -15,7 +12,7 @@ namespace DXS.ThemedUI
 
         public Style(Action<T> styleAction) : this(null, styleAction) { }
 
-        public Style(IStyle<T> parent, Action<T> styleAction)
+        public Style(IStyle<T>? parent, Action<T> styleAction)
         {
             styleActions = new List<Action<T>>();
             if (parent != null)

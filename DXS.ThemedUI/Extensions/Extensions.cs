@@ -1,6 +1,4 @@
-﻿using System;
-using UIKit;
-
+﻿
 namespace DXS.ThemedUI.Extensions
 {
     public static class Extensions

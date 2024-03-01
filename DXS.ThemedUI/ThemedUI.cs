@@ -6,7 +6,7 @@
 
         public static T GetCurrentTheme<T>() => (T) CurrentTheme;
 
-        public static void Init(ITheme selectedTheme = null)
+        public static void Init(ITheme? selectedTheme = null)
         {
             CurrentTheme = selectedTheme ?? new DefaultTheme();
         }
